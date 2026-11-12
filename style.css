@@ -1,0 +1,197 @@
+/* ==========================================================================
+   NusaProperti – style.css
+   Dimuat setelah Bootstrap. Berisi: hero, tentang kami, dan komponen terkait.
+   ========================================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+  --navy: #1b4468;
+  --navy-dark: #14324d;
+  --ink: #1f2d3a;
+  --slate: #5b6673;
+  --gold: #efbd87;
+  --check: #ff7300;
+  --surface: #f5f7fa;
+  --navbar-height: 80px; /* perkiraan tinggi navbar */
+}
+
+/* ---------- Layout ---------- */
+.container-site {
+  width: 100%;
+}
+
+/* ---------- Navbar ---------- */
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-weight: 800;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(90deg, rgba(5, 25, 40, 0.92) 0%, rgba(5, 25, 40, 0.78) 35%, rgba(5, 25, 40, 0.38) 100%),
+    url('Asset/hero-villa.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  min-height: calc(100vh - var(--navbar-height));
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  color: var(--gold);
+}
+
+.hero-subtitle {
+  max-width: 500px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* ---------- Properti pilihan ---------- */
+.property {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 12px 64px;
+}
+
+/* ---------- Tentang kami ---------- */
+.tentang-kami {
+  padding: 100px 0;
+  background: var(--surface);
+}
+
+.tentang-kami .container {
+  max-width: 1400px;
+}
+
+.tentang-kami .row {
+  --bs-gutter-x: 4rem;
+}
+
+.featured-wrap {
+  position: relative;
+}
+
+.featured-house {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(20, 50, 77, 0.18);
+  object-fit: cover;
+}
+
+.stat-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  line-height: 1.2;
+}
+
+.stat-badge strong {
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+
+.stat-badge span {
+  color: var(--slate);
+  font-size: 0.75rem;
+}
+
+.tentang-kami-title {
+  margin-bottom: 1.25rem;
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.tentang-kami-desc {
+  margin-bottom: 1rem;
+  color: var(--slate);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* ---------- Checklist ---------- */
+.checklist {
+  margin: 1.5rem 0 2rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.6rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.check i {
+  color: var(--check);
+  font-size: 0.8rem;
+}
+
+/* ---------- Tombol ---------- */
+.property-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 250ms, transform 250ms;
+}
+
+.property-btn:hover {
+  background: var(--navy-dark);
+  transform: translateY(-2px);
+}
+
+.property-btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+  .tentang-kami {
+    padding: 60px 0;
+  }
+
+  .featured-house {
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+}
